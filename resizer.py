@@ -35,8 +35,6 @@ parser.add_argument('rounded', type=str, help="Input rounded image file")
 parser.add_argument('--out','-o', type=str, help="Output directory")
 
 args = parser.parse_args()
-print(args.input)
-
 out_dir = args.out
 
 try:
@@ -55,6 +53,7 @@ try:
         raise Exception('Input rounded file is not exist')
 
     process_file(args.input, 'ic_launcher')
+    print()
     process_file(args.rounded, 'ic_launcher_round')
 
     print('Done.')
